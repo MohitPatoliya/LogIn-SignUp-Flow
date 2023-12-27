@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .body-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111 !important;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .christmas-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative; /* Added this to make room for absolute positioning */
+  }
+  
+  h1 {
+    color: white;
+    font-size: 3em;
+    position: relative;
+    padding: 50px;
+  }
+  
+  h1::before,
+  h1::after {
+    content: '❄️';
+    position: absolute;
+    top: 0;
+    color: #00f;
+    animation: snow 2s linear infinite;
+  }
+  
+  h1::before {
+    left: -30px;
+  }
+  
+  h1::after {
+    right: -30px;
+  }
+  
+  @keyframes snow {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .logout-btn {
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px; /* Adjust the top value based on your preference */
+    right: 25px; /* Adjust the right value based on your preference */
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .logout-btn:hover {
+    background: linear-gradient(45deg, #02300a, #17b331);
+    color: #fff;
+  }
+  
